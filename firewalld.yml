@@ -1,0 +1,14 @@
+- name: Install firewall and enable
+  hosts: webservers
+  become: true
+  tasks: 
+    - name: install latest firewall
+      yum:
+        name: firewalld
+        state: latest
+    - name: enable firewall
+      service: 
+        name: firewalld
+        enabled : true
+        state: started
+  

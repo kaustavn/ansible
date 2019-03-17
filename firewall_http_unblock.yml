@@ -1,0 +1,18 @@
+- name: give user to access http service
+  hosts: webservers
+  become: true
+  tasks:
+    - name: enable http
+      firewalld:
+        service: httpd
+        permanent: true
+        state: enabled
+        immediate: yes
+      notify: restart_httpd
+  handlers:
+    - name: restart_httpd 
+      service:
+        name: httpd
+        enabled: true
+        state: restarted
+     
