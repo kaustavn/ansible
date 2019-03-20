@@ -10,7 +10,7 @@
     service:
       name: httpd
       enabled: true
-  - name: httpd is started
+  - name: httpd is started true
     service:
       name: httpd
       state: started
