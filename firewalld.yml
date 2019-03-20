@@ -6,9 +6,9 @@
       yum:
         name: firewalld
         state: latest
-    - name: enable firewall
+    - name: enable firewalld
       service: 
-        name: firewalld start
+        name: firewalld
         enabled : true
         state: started
   
