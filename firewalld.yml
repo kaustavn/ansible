@@ -8,7 +8,7 @@
         state: latest
     - name: enable firewall
       service: 
-        name: firewalld
+        name: firewalld start
         enabled : true
         state: started
   
