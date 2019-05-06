@@ -1,5 +1,4 @@
 - name: Install firewall and enable
-  hosts: webservers
   become: true
   tasks: 
     - name: install latest firewall
