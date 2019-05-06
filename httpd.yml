@@ -1,5 +1,4 @@
 - name: play to install httpd
-  hosts: webservers
   become: true
   tasks:
   - name: install latest httpd version
